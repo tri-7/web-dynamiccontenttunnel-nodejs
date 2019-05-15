@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Krunker</title>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69264675-5"></script>
+		<script>
+		    window.dataLayer = window.dataLayer || [];
+		    function gtag(){dataLayer.push(arguments);}
+		    gtag('js', new Date());
+		    gtag('config', 'UA-69264675-5');
+		</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({
+		          google_ad_client: "ca-pub-4505182558467475",
+		          enable_page_level_ads: true
+		     }); document.open = function() {};
+		</script>
+		<link rel='shortcut icon' type="image/png" href="./img/favicon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<meta name="description" content="Krunker.io is a free io Multiplayer First Person Shooter. No Download browser FPS! Free!">
+		<meta name="keywords" content="FPS,Apex,Free,IO,agar.io,vertix.io,fortnite,online,shooter">
+		<link rel="stylesheet" href="p/https://krunker.io/css/main.css?build=EFqol" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script data-cfasync="false" type="text/javascript">
+		  	var freestar = freestar || {};
+		  	freestar.hitTime = Date.now();
+		  	freestar.queue = freestar.queue || [];
+		  	freestar.config = freestar.config || {};
+		  	freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+			setInterval(function(){document.querySelectorAll("script[src*='jsdelivr']").length&&(document.body.innerHTML="<div style='font-size:28px;margin-top:30px;width:100%;text-align:center'>SCRIPT DETECTED</div>")},1E4);
+			freestar.config.enabled_slots = ["krunkerio_728x90_1"
+			];!function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/krunker-io";e+=freestar.debug?
+			"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);window.chH=function(a){try{null==window.hack&&null==window.hags&&null==window.aimbot&&null==window.nxtrun&&null==window.KrunkAimDotTK||!a.socket||(a.send("rcY"))}catch(b){}};
+		</script>
+	</head>
+	<body oncontextmenu="return false;">
+
+		<!-- PRELOAD SCRIPTS -->
+		<div class="g-recaptcha" data-size="invisible" id="captchaBtn" data-callback="onSubmit">Captcha</div>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.min.js"></script>
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+		<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+
+		<div id="uiBase">
+			<!-- ERROR NOTIFICATION -->
+			<div id="errorNotification" class="menuCard" style="display: none">
+				<div>It looks like Krunker ran in to a problem. Please try <a target="_blank" href="https://www.computerhope.com/issues/ch001411.htm">disabling all of your browser extensions</a> and reloading the page. If the issue persists, please report the issue to us on Reddit or Discord.</div>
+				<br/>
+				<div style="text-align: center"><a onclick="errorNotification.style.display = 'none'" style="cursor:pointer">Hide</a></div>
+			</div>
+
+			<!-- AD HOLDER -->
+			<div id="aHolder" style="display: none">
+				<div id="aMerger">
+					<div id='baseLinks'>
+						<div id="streamContainer">Loading Streams...</div>
+					</div>
+					<div style='height:10px'></div>
+					<div id="aContainer">
+						<div><div align="center" id="krunkerio_728x90_1">
+							<script data-cfasync="false" type="text/javascript">
+								freestar.queue.push(function () {
+									googletag.display('krunkerio_728x90_1');
+								});
+							</script>
+						</div></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- OVERLAY -->
+			<div id="overlay"></div>
+
+			<!-- FLASH -->
+			<img id="flashOverlay" src="./img/muzflash.png" />
+			<div id="nukeFlash"></div>
+
+			<!-- MAP INFO -->
+			<div id="infoHolder">
+				<div id="mapInfoHolder">
+					<div id="modVote"></div>
+					<div id="mapVote"></div>
+					<div id="mapInfo"></div>
+					<div>
+						<a href="./docs/terms.txt" target="_blank" class="menuLink"
+						   onmouseover="SOUND.play('tick_0',0.1)">Terms & Conditions</a>
+						<span style='font-size:20px;color:#fff'>|</span>
+						<a href="./docs/versions.txt" target="_blank" class="menuLink"
+						   onmouseover="SOUND.play('tick_0',0.1)">v1.2.4<a>
+					</div>
+				</div>
+			</div>
+
+			<!-- PURCHASE WINDOW -->
+			<div id="purchaseHolder">
+				<div id="purchaseSelector">
+					PAYMENT METHOD<div></div>
+					<div style='color:rgba(0,0,0,0.4);font-size:22px'>Reversing a payment can<br/> result in the termination<br/> of your krunker account.</div>
+					<div id="paypal-button"></div>
+				</div>
+			</div>
+
+			<!-- MAIN MENU -->
+			<div id="menuHolder">
+
+				<!-- SPIN UI -->
+				<div id="spinUI">
+					<div id="spinKR"></div>
+					<div id="spinInfo"></div>
+					<div id="spinHolder" class="midHolder">
+						<div id="spinItem">
+							<div id="spinItemCanvas"></div>
+						</div>
+						<div id="spinItemName"></div>
+						<div id="spinButton">
+							<div id="spinText">
+								<div id="spinHeader">SPIN</div>
+								<div id="spinCost"></div>
+							</div>
+						</div>
+						<canvas id="spinWindow"></canvas>
+					</div>
+				</div>
+
+				<!-- PURCHASE LOAD -->
+				<div id="purchaseLoad">
+					<div class="centerV">
+						<div id="purchLoadRing" class="lds-ring">
+							<div></div><div></div><div></div><div></div></div>
+						<div id="purchaseLabel"></div>
+					</div>
+				</div>
+
+				<!-- MAIN MENU -->
+				<div id="menuHider" style="display: none;">
+
+					<!-- NAME -->
+					<div id="gameNameHolder">
+						<img id="mainLogo" />
+						<div id="subLogoButtons">
+							<div class="button small" onmouseenter="playTick()" onclick="openHostWindow()">Host Game</div>
+							<div id="inviteButton" class="button small" onmouseenter="playTick()" onclick="copyInviteLink()">Invite</div>
+							<div class="button small" onmouseenter="playTick()" onclick="showWindow(2)">Server Browser</div>
+						</div>
+					</div>
+
+					<!-- CLAIM KR -->
+					<div id="claimHolder" onclick="claimReward()">
+						<img id="claimImg" />
+						<div id="claimTimer"></div>
+					</div>
+
+					<!-- CLASS -->
+					<div id="menuClassContainer">
+						<div id="menuClassName">?</div>
+						<div id="menuClassSubtext">?</div>
+						<canvas id="classPreviewCanvas"></canvas>
+						<div id="customizeButton" class="button bigShadowT"
+							onmouseenter="playTick()" onclick="showWindow(3)">Customize</div>
+					</div>
+
+					<!-- HEADER -->
+					<div id="signedOutHeaderBar" class="headerBarLeft headerBar">
+						<div class="button" style="width:150px" onmouseenter="playTick()"
+							onclick="showWindow(5)">Login</div>
+						<div class="button" style="width:180px" onmouseenter="playTick()"
+						 	onclick="showWindow(5)">Register</div>
+					</div>
+
+					<div id="signedInHeaderBar" class="headerBarLeft headerBar" style="display: none">
+						<div id="menuUsernameContainer" onclick="showWindow(5)">
+							<img src="./img/favicon.png" id="menuMiniProfilePic"><div id="menuAccountUsername">?</div>
+						</div>
+						<div class="verticalSeparator"></div>
+						<div class="krInfo">
+							<div id="menuKRCount">?</div>
+							<div class="imageButton krSocial"  onmouseenter="playTick()" onclick="showWindow(14)"></div>
+						</div>
+						<div class="verticalSeparator"></div>
+						<div id="levelContainer">
+							<div><div id="menuLevelIcon"></div><div id="menuLevelText">LVL ?</div></div>
+							<div class="progressBar" style=""><div class="progressBarInner" id="menuLevelBar"></div></div>
+						</div>
+					</div>
+
+					<div class="headerBarRight headerBar">
+						<div id="menuServerInfoContainer">
+							<div id="menuRegionLabel" onclick="showWindow(2)">...</div>
+							<div id="menuPingDisplay"><i class="material-icons" style="color: gray">signal_cellular_alt</i> -</div>
+						</div>
+						<div class="verticalSeparator"></div>
+						<div class="imageButton discordSocial" onmouseenter="playTick()" onclick="openURL('https://discord.gg/2hhCVc9')"></div>
+						<div class="imageButton redditSocial" onmouseenter="playTick()" onclick="openURL('https://www.reddit.com/r/KrunkerIO')"></div>
+						<div class="imageButton twitterSocial" onmouseenter="playTick()" onclick="openURL('https://twitter.com/Sidney_de_Vries')"></div>
+						<div class="imageButton fandomSocial" onmouseenter="playTick()" onclick="openURL('http://krunkerio.wikia.com/wiki/Krunker.io/_Wiki')"></div>
+					</div>
+
+					<!-- MENU -->
+					<div id="menuItemContainer">
+						<div class="menuItem" onmouseenter="playTick()" onclick="showWindow(5)">
+							<div class="menuItemIcon iconProfile"></div>
+							<div class="menuItemTitle">Profile</div>
+						</div>
+						<div class="menuItem" onmouseenter="playTick()" onclick="showWindow(14)">
+							<div class="menuItemIcon iconShop"></div>
+							<div class="menuItemTitle">Shop</div>
+						</div>
+						<div class="menuItem" onmouseenter="playTick()" onclick="window.open('/social.html', '_blank')">
+							<div class="menuItemIcon iconSocial"></div>
+							<div class="menuItemTitle">Social</div>
+						</div>
+						<div class="menuItem" onmouseenter="playTick()" onclick="showWindow(10)">
+							<div class="menuItemIcon iconMaps"></div>
+							<div class="menuItemTitle">Maps</div>
+						</div>
+						<div class="menuItem" onmouseenter="playTick()" onclick="showWindow(4)">
+							<div class="menuItemIcon iconMods"></div>
+							<div class="menuItemTitle">Mods</div>
+						</div>
+						<div class="menuItem" onmouseenter="playTick()" onclick="showWindow(1)">
+							<div class="menuItemIcon iconSettings"></div>
+							<div class="menuItemTitle">Settings</div>
+						</div>
+					</div>
+
+					<div id="windowHolder" style="display:none">
+						<div id="windowHeader"></div>
+						<div id="menuWindow"></div>
+					</div>
+				</div>
+
+				<!-- INFO -->
+				<div id="challButton">
+					<span style='font-size:15px;color:rgba(255,255,255,0.6)'>Challenge Mode</span>
+					<label class='switchsml'><input type='checkbox' onclick='toggleChal(this.checked)'><span class='sliderSml'></span></label>
+				</div>
+				<div id="spectButton">
+					<span style='font-size:15px;color:rgba(255,255,255,0.6)'>Spectate</span>
+					<label class='switchsml'><input type='checkbox' onclick='toggleSpect(this.checked)'><span class='sliderSml'></span></label>
+				</div>
+				<div id="stremButton">
+					<span style='font-size:15px;color:rgba(255,255,255,0.6)'>Stream Mode</span>
+					<label class='switchsml'><input id="streamCheckbox" type='checkbox' onclick='toggleStrm(this.checked)'><span class='sliderSml'></span></label>
+				</div>
+				<a id="advertiseButton" style='font-size:15px;margin-bottom:10px' href="javascript:;" onclick='showWindow(21)' onmouseover="SOUND.play('tick_0',0.1)">Advertise in Game</a>
+				<a id="advertiseButton" style='font-size:15px;margin-bottom:10px;top:115px'
+					href="https://client.krunker.io/setup.exe"
+					onmouseover="SOUND.play('tick_0',0.1)">Download Client</a>
+			</div>
+
+			<!-- END SCREEN -->
+			<div id="endUI">
+				<div style="position:absolute;width:100%;text-align:center;top:-30px">
+					<img id="victorySub" />
+				</div>
+				<div id="endInfo">
+					<div id="victoryText"></div>
+					<div id="endTimer"></div>
+				</div>
+				<table id="endTable"></table>
+				<div id="voteHolder"></div>
+			</div>
+
+			<!-- AIM RECTICLE -->
+			<div id="aimRecticle">
+				<div class="topBox black"></div>
+				<div class="leftBox black"></div>
+				<img id="recticleImg" src="./textures/recticle.png"/>
+				<div class="bottomBox black"></div>
+				<div class="rightBox black"></div>
+			</div>
+			<img id="aimDot" src="./textures/dots/dot_0.png" />
+
+			<!-- CHAT UI -->
+			<div id="chatUI">
+				<div id="chatHolder">
+					<div id="chatList"></div>
+					<input id="chatInput" placeholder="Enter Message" maxlength="70"></input>
+				</div>
+				<div id="voiceDisplay"><i id="voiceIcon" class="material-icons"
+					style="color:#fff;font-size:40px">mic</i> <div id="recTimer"></div></div>
+				<div id="speakerDisplay"></div>
+			</div>
+
+			<!-- BLOCKER -->
+			<div id="blocker"></div>
+
+			<!-- SPECTATING -->
+			<div id="spectateUI">
+				Spectating
+			</div>
+
+			<!-- PLAYWIRE -->
+			<div id="my-content" style="display: none;"><!-- You watched an ad --></div>
+			<div id="pre-content-container" style="display: none"></div>
+
+			<!-- GAME UI -->
+			<div id="gameUI">
+				<div id="inGameUI">
+					<div id="topRight">
+						<div id="leaderDisplay">
+							<div id="leaderContainer"></div>
+						</div>
+						<div id="spectCount" class='countIcon'></div>
+						<div id="scoreZoneCount" class='countIcon'></div>
+						<div id="livesCount" class='countIcon'></div>
+						<div id="killCount">
+							<img src="./img/skull.png" id="killsIcon" />
+							<span id="killsVal">0</span>
+						</div>
+					</div>
+					<img id="bloodDisplay" src="./img/blood.png" />
+					<div id="chalDisplay">
+						<div id="chalName" class="centerUIB"></div>
+					</div>
+					<div id="weaponDisplay"></div>
+					<div id="bottomRight">
+						<div id="killStreakHolder"></div>
+						<div id="ammoDisplay" class="UIB"><div id="ammoVal"></div>
+							<img id="ammoIcon" src="./textures/ammo_0.png">
+						</div>
+					</div>
+					<div id="gameMessage"></div>
+
+					<div id="topLeftHolder">
+						<div id="timerDisplay" class="leftUIB">
+							<img src="./img/timer.png" id="timerIcon" />
+							<span id="timerVal"></span>
+						</div>
+						<div id="pingDisplay"></div>
+						<div></div>
+						<div style='width:100%'>
+							<div id="teamScores"></div>
+						</div>
+						<div id="curGameInfo"></div>
+					</div>
+
+					<div id="reloadMsg" class='centerUIB'></div>
+					<div id="healthHolder">
+						<div id="healthBar">
+							<div id="healthValue"></div>
+							<div id="healthBarH"></div>
+						</div>
+						<img src="./img/skull.png" id="challIcon" />
+					</div>
+					<div id="teamName"></div>
+					<div id="hitHolder"></div>
+					<div id="scoreTextHolder">
+						<div id="scoreText"></div>
+					</div>
+					<div id="killCardHolder">
+						Killed By<br/>
+						<div id="killCard"></div>
+					</div>
+					<div id="playerInfos"></div>
+					<div id="texts3DHolder"></div>
+					<div id="crosshair">
+						<div id="crosshairT"></div>
+						<div id="crosshairB"></div>
+						<div id="crosshairL">
+							<div class="crosshairHolder">
+								<div class="crosshairLine" id="crosshairLL"></div>
+							</div>
+						</div>
+						<div id="crosshairR">
+							<div class="crosshairHolder">
+								<div class="crosshairLine" id="crosshairRL"></div>
+							</div>
+						</div>
+					</div>
+					<img id="hitmarker" src='./textures/hitmarker_3.png'/>
+				</div>
+				<div id="instructionHolder">
+					<div id="instructions">LOADING...</div>
+				</div>
+			</div>
+
+			<!-- GDPR STUFF -->
+			<div id='consentBlock'>
+				<div id="consentShake">
+					<div id="consentWindow">
+						<span style="font-size:25px">Welcome to Krunker.io</span>
+						<div style='color:rgba(0,0,0,0.6)'>
+							This site uses cookies to personalize your experience. To use this site
+							you must agree and read the <a target="_blank" href="./docs/terms.txt">Terms & Conditions.</a>
+							Learn more about cookies <a href="https://cookiesandyou.com/">here.</a>
+						</div>
+						<div>
+							<div class='termsBtn' onclick="checkTerms(0)" style="background-color:#dd4a42">Decline</div>
+							<div class='termsBtn' onclick="checkTerms(1)" style="background-color:#a6dd42">Accept</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- LOAD GAME SCRIPT -->
+		<script src="p/https://krunker.io/libs/zip.js?build=EFqol"></script>
+		<script src="p/https://krunker.io/libs/zip-ext.js?build=EFqol"></script>
+		<script src="p/https://krunker.io/js/game.EFqol.js?build=EFqol"></script>
+		<script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit"></script>
+
+	</body>
+</html>
